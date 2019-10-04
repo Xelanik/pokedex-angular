@@ -1,0 +1,12 @@
+.pokemon-card-wrap {
+  background: rgb(220, 255, 167);
+  border-radius: 10px;
+  padding: 8px;
+
+  .pokemon-card {
+    background: white;
+    height: 100%;
+    width: 100%;
+    border-radius: 5px
+  }
+}
