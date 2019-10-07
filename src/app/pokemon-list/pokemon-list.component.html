@@ -1,3 +1,3 @@
 <div class="pokemon-list-wrap">
-  <app-pokemon *ngFor="let pokemon of pokemonList"></app-pokemon>
+  <app-pokemon [pokemon]='pokemon' *ngFor="let pokemon of pokemonList" (getFullInfo)='showFullInfo($event)'></app-pokemon>
 </div>

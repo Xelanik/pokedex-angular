@@ -1,10 +1,10 @@
-<div class="pokemon-detail-wrap">
+<div class="pokemon-detail-wrap" *ngIf='pokemonDetails.name'>
   <div class="pokemon-detail">
     <div class="pokemon-detail-img">
       <img src="" alt="">
     </div>
     <div class="pokemon-detaild-stats">
-      <p>stats</p>
+      <p>Pokemon name - {{ pokemonDetails.name }}</p>
     </div>
   </div>
 </div>
