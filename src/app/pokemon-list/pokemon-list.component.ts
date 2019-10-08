@@ -1,27 +1,19 @@
-import {
-  Component,
-  OnInit,
-  Output,
-  Input,EventEmitter
-} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import { PokemonService } from 'src/services/pokemon.service';
 
 @Component({
   selector: 'app-pokemon-list',
   templateUrl: './pokemon-list.component.html',
-  styleUrls: ['./pokemon-list.component.scss']
+  styleUrls: ['./pokemon-list.component.scss'],
 })
+
 export class PokemonListComponent implements OnInit {
+  pokemons: { name: string, url: string}[] = [];
 
-  @Input() pokemonList = [];
-  @Output() getData = new EventEmitter<{name: string}>();
-  
-  showFullInfo(data: {name: string}) {
-    this.getData.emit(data)
-    console.log(data)
+  constructor(public ps: PokemonService) {}
+
+  ngOnInit() {
+    this.ps.getPokemons()
   }
-
-  constructor() {}
-
-  ngOnInit() {}
 
 }

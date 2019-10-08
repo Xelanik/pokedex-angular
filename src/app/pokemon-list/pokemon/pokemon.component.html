@@ -1,10 +1,13 @@
-<div class="pokemon-card-wrap" (click)='onPokemonSelect()'>
+<div class="pokemon-card-wrap" [ngClass]='pokemonTypes[0].type.name' (click)='onClick()' *ngIf='pokemonInfo'>
   <div class="pokemon-card">
     <div class="pokemon-img">
-      <img src="" alt="">
+      <img [src]="dataLoaded ? pokemonInfo.sprites.front_default : '../../assets/loader.gif'" (load)='loaded()'>
     </div>
-    <h3>{{ pokemon.name }}</h3>
+    <h3>{{ pokemonInfo.name }}</h3>
     <div class="pokemon-types">
+      <div class="pokemon-type" [ngClass]='[types.type.name, "type"]' *ngFor='let types of pokemonTypes'>
+        {{ types.type.name }}
+      </div>
     </div>
   </div>
 </div>
