@@ -1,3 +1,6 @@
 <app-header></app-header>
 <app-pokemon-list></app-pokemon-list>
-<app-pokemon-details></app-pokemon-details>
+<app-pokemon-details 
+*ngIf='ps.pokemonFullInfo.name' 
+[pokemonInfo]='ps.pokemonFullInfo'
+(click)='onClose()'></app-pokemon-details>

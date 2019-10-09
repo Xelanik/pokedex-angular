@@ -1,6 +1,6 @@
 <div class="pokemon-list-wrap">
-  <app-pokemon 
+  <app-pokemon
     *ngFor="let pokemon of ps.pokemonList"
-    [pokemon]='pokemon'></app-pokemon>
+    [pokemon]='pokemon' ></app-pokemon>
 </div>
 <button (click)='ps.loadMorePokemons()' >Load more</button> 

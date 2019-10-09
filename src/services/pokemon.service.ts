@@ -37,7 +37,7 @@ export class PokemonService {
    return this.http.get(url)
   }
 
-  getFullInfo( pokemon: {} ){
+  getFullInfo( pokemon: object ){
     console.log(pokemon)
     this.pokemonFullInfo = pokemon
   }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PokemonService } from 'src/services/pokemon.service';
 
 @Component({
   selector: 'app-root',
@@ -8,5 +9,9 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
+ constructor(private ps: PokemonService){}
 
+ onClose(){
+   this.ps.closeFullInfo()
+ }
 }

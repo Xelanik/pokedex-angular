@@ -13,7 +13,7 @@ export class PokemonComponent implements OnInit {
   constructor(private pokeService: PokemonService) { }
 
   dataLoaded: boolean = false;
-  pokemonInfo: {name: string, types: any};
+  pokemonInfo: any;
   pokemonTypes = [];
 
   ngOnInit() {

@@ -1,10 +1,10 @@
-<div class="pokemon-detail-wrap" *ngIf='ps.pokemonFullInfo.name' (click)='ps.closeFullInfo()'>
+<div class="pokemon-detail-wrap" [ngClass]='pokemonInfo.types[0].type.name'>
   <div class="pokemon-detail">
     <div class="pokemon-detail-img">
-      <img src="" alt="">
+      <img [src]='pokemonInfo.sprites.front_default' alt="">
     </div>
     <div class="pokemon-detaild-stats">
-      <p>Pokemon name - {{ pokemon.name }}</p>
+      <p class="pokemon-name">{{ pokemonInfo.name }} #{{ pokemonInfo.id}}</p>
     </div>
   </div>
 </div>
